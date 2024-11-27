@@ -1,0 +1,280 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+  
+  header {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+  }
+
+  button {
+    padding: 10px 15px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #004d40;
+  }
+  
+  .icons{
+    width: 25px;
+    height: 20px;
+    object-fit: fill;
+    display: block;
+    float: left;
+    margin-top: 7px;
+  }
+  
+  /* Style for the dropdown container */
+  .dropdown {
+    position: relative;
+    display: block; 
+    float:left;
+  }
+  
+  /* Style for the dropdown content (hidden by default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;   
+    background-color: #ffffff; 
+    min-width: 160px;    
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+  }
+  
+  /* Show dropdown content when hovering over the icon */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Style for each dropdown item */
+  .dropdown-content a {
+    color: black;               /* Text color */
+    padding: 12px 16px;         /* Padding inside each item */
+    text-decoration: none;      /* Remove underline from links */
+    display: block;             /* Make links block elements so they stack vertically */
+  }
+  
+  .dropdown-content a:hover {
+    background-color: #f3b2b2;     /* Change background on hover */
+  }
+  
+  
+  h1 {
+    margin: 0;
+  }
+  
+  /* Dashboard Layout */
+  .dashboard {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* Section styles */
+  .section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    min-width: 280px;
+  }
+  
+  .section .users-section{
+    display: flex;
+    align-items: center;
+  }
+
+  .users-sections{
+    width: 50%;
+  }
+
+  .s1, .s2{
+    display: flex;
+    justify-content: right;
+  }
+
+  .s2 input{
+    width: 30%;
+  }
+
+  /* Specific section titles */
+  h2 {
+    margin: 10px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #f2f2f2;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+
+/*----------------------------! ANALYTICS SECTION !-----------------------------*/
+
+.analytics{
+    display: flex;
+    justify-content: space-between;
+}
+
+.analytics-card {
+    background-color: #e0f7fa;
+    padding: 20px;               
+    display: inline-block;
+    border-radius: 8px;
+    margin-bottom: 20px;         
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+    width: 24%;              
+  }
+  
+  .analytics-card h3 {
+    font-size: 1.2em;
+    color: #00796b;
+    margin-bottom: 10px;         /* Adds space between the title and the paragraph */
+  }
+  
+  .analytics-card p {
+    font-size: 1.5em;
+    color: #004d40;
+  }
+  
+  
+/*----------------------------! REPORT SECTION !-----------------------------*/
+  .report-card {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;         
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);           
+    margin: 10px; 
+  }
+  
+  .report-card h3 {
+    font-size: 1.2em;
+    color: #00796b;
+  }
+  
+  .report-card p {
+    font-size: 1.5em;
+    color: #004d40;
+  }
+  
+
+ /* Style for the container */
+.slider-container {
+    width: 100%;  /* Full width */
+    overflow: hidden;  /* Hide the overflow to create the sliding effect */
+}
+
+/* Style for individual slides */
+.slide {
+    background-color: #e0f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    flex-shrink: 0;  /* Prevent shrinking of slides */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;  /* Each slide takes up the full width of the viewport */
+}
+
+/* Keyframes for sliding animation */
+@keyframes slideAnimation {
+    0% {
+        transform: translateX(0); /* Start with the slides in normal order */
+    }
+    10% {
+        transform: translateX(-100vw); /* Move to the second slide */
+    }
+    20% {
+        transform: translateX(-200vw); /* Move to the third slide */
+    }
+    30% {
+        transform: translateX(-300vw); /* Move to the fourth slide */
+    }
+    40% {
+        transform: translateX(-400vw); /* Move to the first duplicated slide */
+    }
+    50% {
+        transform: translateX(-500vw); /* Move to the second duplicated slide */
+    }
+    60% {
+        transform: translateX(-600vw); /* Move to the third duplicated slide */
+    }
+    70% {
+        transform: translateX(-700vw); /* Move to the fourth duplicated slide */
+    }
+    80% {
+        transform: translateX(-800vw); /* Back to the first slide again */
+    }
+    90% {
+        transform: translateX(-900vw); /* Continue to the second slide */
+    }
+    100% {
+        transform: translateX(-1000vw); /* Finish the cycle and loop */
+    }
+}
+
+/* Set up the slider container to animate */
+.slider {
+    display: flex;
+    animation: slideAnimation 10s infinite; /* Continuous animation */
+    width: 100%;  /* Set width to 200% to accommodate both the original and duplicated slides */
+}
+
+/* Remove any overflow outside the slider container */
+.slider-container {
+    overflow: hidden;
+}
+
+/* Ensure the last duplicate slide wraps correctly */
+.slider:after {
+    content: "";
+    display: flex;
+    width: 100vw;
+    flex-shrink: 0;
+}
+
+  /* Responsive Layout */
+  @media (max-width: 768px) {
+    .dashboard {
+      flex-direction: column;
+    }
+  }
+
+  

@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+  
+  header {
+    background-color: #00796b;
+    color: white;
+    text-align: center;
+  }
+
+  header h1{
+    background-color: #00796b;
+    color: white;
+    padding: 10px 0 5px 0;
+    text-align: center;
+    }
+  
+  .icons {
+    width: 25px;
+    height: 20px;
+    object-fit: fill;
+    display: block;
+    float: left;
+    margin-top: 10px;
+  }
+  
+  /* Dropdown Container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    margin: 5px;
+}
+
+/* Dropdown Button (Optional: if you want to have a button or label) */
+.dropdown button {
+    background-color: #D328E2;
+    color: white;
+    font-size: 16px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+    justify-content: left;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    padding: 10px 20px;
+}
+
+.dropdown button:hover {
+    background-color: #a322af;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border-radius: 5px;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Show dropdown content on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+}
+
+/* Dropdown items */
+.dropdown-content a {
+    color: #333333; /* Darker text color for contrast */
+    text-decoration: none;
+    display: block;
+    font-size: 14px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+}
+
+.dropdown-content a:hover {
+    background-color: #f3b2b2; /* Soft hover background */
+    color: #ffffff; /* Change text color on hover */
+    padding-left: 50px; /* Sliding effect when hovering */
+}
+
+.dropdown-content {
+    border: 1px solid #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    visibility: visible;
+    opacity: 1;
+}
+
+  
+  .report-main {
+    padding: 20px;
+    margin: 0 auto;
+  }
+  
+  h1,
+  h2 {
+    color: #004d40;
+  }
+  
+  .chart-section {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .chart-box {
+    width: 30%;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .bar-chart{
+    width: 50%;
+    margin: 10px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .report-section {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .report-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .report-table th,
+  .report-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .report-table th {
+    background-color: #e0f7fa;
+    color: #00796b;
+  }
+  
+  .report-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  footer {
+    text-align: center;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #004d40;
+    color: white;
+  }
+  .report-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+  }
+  
+  .report {
+    display: flex;
+    justify-content: left;
+    width: 45%;
+    height: 20px;
+  }
+  
+  .generate-report {
+    display: flex;
+    justify-content: right;
+    width: 50%;
+  }
+  
+  .checkout-button {
+    padding: 10px 20px;
+    background-color: #00796b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .checkout-button:hover {
+    background-color: #004d40;
+  }
+  
