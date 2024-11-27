@@ -49,6 +49,9 @@ The frontend of the POS system consists of multiple pages, each designed to perf
 ---
 
 ### 2. **Inventory Management**
+
+![image](https://github.com/user-attachments/assets/4a76c666-6c4d-455c-8d96-39edf576010e)
+
 - **Purpose**: Manage stock levels for products.
 - **Features**:  
   - Add, edit, or delete products from the inventory.
@@ -59,6 +62,9 @@ The frontend of the POS system consists of multiple pages, each designed to perf
 ---
 
 ### 3. **Manage Orders**
+
+![image](https://github.com/user-attachments/assets/70f659bd-4aa7-4226-ab73-5c551ff69dd8)
+
 - **Purpose**: View and manage all completed and ongoing orders.
 - **Features**:  
   - Display a list of orders with details such as date, order number, and total.
@@ -68,6 +74,9 @@ The frontend of the POS system consists of multiple pages, each designed to perf
 ---
 
 ### 4. **Customer History**
+
+![image](https://github.com/user-attachments/assets/fd843ae6-3232-40c3-8ff2-256ff3d11ca8)
+
 - **Purpose**: Track customer purchase history for better service and insights.
 - **Features**:  
   - Search for customers by name, email, or phone number.
@@ -77,6 +86,9 @@ The frontend of the POS system consists of multiple pages, each designed to perf
 ---
 
 ### 5. **Analytics**
+
+![image](https://github.com/user-attachments/assets/51a8448e-b54b-4ccd-947d-fbad0e0c5da6)
+
 - **Purpose**: Provide insights into business performance.
 - **Features**:  
   - View sales trends over time (daily, weekly, monthly).
@@ -86,6 +98,9 @@ The frontend of the POS system consists of multiple pages, each designed to perf
 ---
 
 ### 6. **Dashboard**
+
+![image](https://github.com/user-attachments/assets/4f11e6b4-3b2d-4dda-a882-1852f98fcf86)
+
 - **Purpose**: Provide a centralized overview of business activity.
 - **Features**:  
   - Display key metrics such as total sales, orders, and inventory status.
@@ -93,6 +108,23 @@ The frontend of the POS system consists of multiple pages, each designed to perf
   - Provide quick links to other pages for efficient navigation.
 
 ---
+
+### **GRASP Pattern: Indirection**
+
+In the system, the **AuthController** is responsible for handling incoming authentication requests. Rather than directly accessing the database, it delegates the task to a **Service** layer. The **Service** then interacts with the **Repository** to fetch or manipulate data from the database. This implementation follows the **Indirection** principle of GRASP, which suggests that responsibilities should be assigned to intermediate objects when direct assignment creates tight coupling or violates separation of concerns.
+
+![image](https://github.com/user-attachments/assets/4e43a034-c8f5-49a0-af1b-6316c2c80101)
+
+- **Why Indirection?**
+  - **Decouples** components: The **Controller** doesn't need to know the internal details of how data is fetched or how business logic is processed. It simply delegates tasks to the **Service**.
+  - **Separation of Concerns**: The **AuthController** is only responsible for processing HTTP requests and responses, while the **Service** layer handles the application logic, and the **Repository** focuses on interacting with the database.
+  - **Maintainability**: Changes to business logic (in the **Service** layer) or database access (in the **Repository**) do not require changes to the **Controller**, making the code more maintainable and adaptable.
+  - **Testability**: By isolating the database access into the **Repository** and the business logic into the **Service**, unit testing becomes easier. Mocking the **Service** and **Repository** is straightforward for testing the **AuthController**.
+  - **Flexibility**: Future changes, like adding new authentication methods or changing the database, can be done within the **Service** or **Repository** without affecting the **AuthController**.
+
+This design improves code modularity, reusability, and allows for easier refactoring in the future, making the system more scalable and robust.
+
+
 
 ## **Backend Features**
 
