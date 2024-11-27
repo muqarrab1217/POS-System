@@ -35,6 +35,10 @@ The **frontend** is built using **React**, delivering a modern, responsive, and 
 The frontend of the POS system consists of multiple pages, each designed to perform specific business tasks. Here's a detailed breakdown of the key pages:
 
 ### 1. **Take Order**
+
+![image](https://github.com/user-attachments/assets/6265b9ac-41d6-418e-9533-be4ba8e55f50)
+
+
 - **Purpose**: Quickly process orders for customers.
 - **Features**:  
   - Add products to an order using a searchable product list.
@@ -141,3 +145,6 @@ The backend of the POS system is built with **Spring Boot** and serves as the ba
 2. Install dependencies:
    ```bash
    npm install
+3. Start Frontend:
+   ```bash
+   npm start
