@@ -163,7 +163,7 @@ The backend of the POS system is built with **Spring Boot** and serves as the ba
 
 ### **Backend**
 - Spring Boot
-- Hibernate/JPA (for ORM and database management)
+- jdbc Template (for database management)
 - MySQL (or PostgreSQL) for data storage
 - Spring Security for authentication
 - RESTful APIs for communication with the frontend
